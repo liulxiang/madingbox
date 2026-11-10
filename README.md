@@ -170,6 +170,8 @@ ln -s "$REPO" "$PROFILE/node_modules/dsh-mading-toolbox"
 export MADING_TOOLBOX_DIR="$HOME/Pictures/码叮工具箱"
 ```
 
+从旧版升级时，如果新目录还不存在，插件会把原来的 `~/Downloads/码叮百宝箱/` 自动改名为 `~/Downloads/码叮工具箱/`；两个目录都存在时保留旧目录不动，新输出写到新目录。
+
 ## 权限（macOS）
 
 - **屏幕录制**：第一次截图时系统会询问，给 DSH 授权后重启 DSH。没授权时截图会失败或得到黑图。

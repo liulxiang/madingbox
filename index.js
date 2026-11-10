@@ -40,13 +40,25 @@ const COMPRESS_TIMEOUT_MS = 2 * 60 * 1000;
 const DECODE_SCRIPT = fileURLToPath(new URL('./vendor/qrdecode.js', import.meta.url));
 
 const HOME = os.homedir();
+const DEFAULT_ROOT = path.join(HOME, 'Downloads', '码叮工具箱');
+const LEGACY_ROOT = path.join(HOME, 'Downloads', '码叮百宝箱');
 const ROOT = process.env.MADING_TOOLBOX_DIR
   ? path.resolve(process.env.MADING_TOOLBOX_DIR)
-  : path.join(HOME, 'Downloads', '码叮工具箱');
+  : DEFAULT_ROOT;
 const SHOT_DIR = path.join(ROOT, '截图');
 const QR_DIR = path.join(ROOT, '二维码');
 const COMPRESS_DIR = path.join(ROOT, '压缩');
 const JXA_CACHE = path.join(os.tmpdir(), 'mading-toolbox-jxa');
+
+function migrateLegacyRoot() {
+  if (process.env.MADING_TOOLBOX_DIR) return;
+  if (fs.existsSync(ROOT) || !fs.existsSync(LEGACY_ROOT)) return;
+  try {
+    fs.renameSync(LEGACY_ROOT, ROOT);
+  } catch {
+    /* 跨卷或权限不足时保留旧目录，新输出继续写到新目录 */
+  }
+}
 
 const COMPRESS_EXTS = new Set(['.png', '.jpg', '.jpeg', '.webp', '.heic', '.tif', '.tiff', '.bmp']);
 
@@ -62,6 +74,7 @@ const MIME = {
 };
 
 export function apply(ctx) {
+  migrateLegacyRoot();
   fs.mkdirSync(SHOT_DIR, { recursive: true });
   fs.mkdirSync(QR_DIR, { recursive: true });
   fs.mkdirSync(COMPRESS_DIR, { recursive: true });
