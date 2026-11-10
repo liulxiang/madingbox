@@ -1,11 +1,29 @@
 {
   "name": "dsh-mading-toolbox",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "码叮百宝箱：DeepSeek Harness 的截图与二维码工具箱（第一期）",
+  "description": "码叮工具箱：DeepSeek Harness 的本地截图、二维码、图片压缩与 JSON 工具箱",
   "type": "module",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://github.com/liulxiang/madingbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liulxiang/madingbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liulxiang/madingbox/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "screenshot",
+    "qrcode",
+    "macos",
+    "compress",
+    "json"
+  ],
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",

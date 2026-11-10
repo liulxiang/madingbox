@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "MaDing Toolbox",
-    "description": "Phase 1: local screenshots (screen, region, window) and QR codes for text, links, Wi-Fi and email."
+    "description": "Phase 2: local screenshots, QR codes, image compression and JSON formatting. No network."
   }
 }

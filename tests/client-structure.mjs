@@ -1,5 +1,5 @@
 /**
- * 码叮百宝箱 · Client 契约测试
+ * 码叮工具箱 · Client 契约测试
  * 不渲染 UI，只确认 bundle 能被 ModuleLoader 接住、apply 能注册侧栏与主面板。
  * 运行：node tests/client-structure.mjs
  */
@@ -63,6 +63,7 @@ assert.equal(typeof mod.apply, 'function');
 
 const registrations = [];
 let registeredDomain = null;
+const dictionaries = {};
 const t = (key) => key;
 const ctx = {
   effect(fn) {
@@ -73,7 +74,8 @@ const ctx = {
       registeredDomain = domain;
       return t;
     },
-    register() {
+    register(domain, lang, dict) {
+      dictionaries[lang] = dict;
       return () => {};
     },
   },
@@ -94,4 +96,12 @@ assert.equal(registeredDomain, 'mading-toolbox');
 assert.ok(registrations.some((r) => r.meta.name === 'sidebar.panellist' && r.meta.id === 'mading-toolbox'));
 assert.ok(registrations.some((r) => r.meta.name === 'main' && r.meta.key === 'mading-toolbox'));
 assert.equal(typeof registrations[0].component, 'function');
-console.log('client bundle ok:', registrations.map((r) => r.meta.name).join(', '));
+
+const usedKeys = new Set([...source.matchAll(/\bt\('([^']+)'\)/g)].map((match) => match[1]));
+for (const lang of ['zh', 'en']) {
+  assert.ok(dictionaries[lang], `locale ${lang} registered`);
+  for (const key of usedKeys) {
+    assert.ok(key in dictionaries[lang], `locale ${lang} missing key: ${key}`);
+  }
+}
+console.log('client bundle ok:', registrations.map((r) => r.meta.name).join(', '), `(${usedKeys.size} keys)`);
