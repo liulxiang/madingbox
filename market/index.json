@@ -1,0 +1,35 @@
+{
+  "format": 1,
+  "title": {
+    "en": "MaDing Toolbox",
+    "zh": "码叮工具箱"
+  },
+  "plugins": [
+    {
+      "name": "dsh-mading-toolbox",
+      "title": {
+        "en": "MaDing Toolbox",
+        "zh": "码叮工具箱"
+      },
+      "description": {
+        "en": "macOS screenshots, QR code generation and decoding, image compression and JSON formatting, with five agent tools.",
+        "zh": "macOS 截图、二维码生成与识别、图片压缩和 JSON 格式化，附带五个 Agent 工具。"
+      },
+      "icon": "https://raw.githubusercontent.com/liulxiang/madingbox/main/assets/icon-512.png",
+      "author": "liulxiang",
+      "homepage": "https://github.com/liulxiang/madingbox#readme",
+      "repository": {
+        "url": "https://github.com/liulxiang/madingbox"
+      },
+      "versions": [
+        {
+          "version": "0.3.0",
+          "publishTimestamp": 1794315746,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    }
+  ]
+}

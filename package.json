@@ -1,7 +1,6 @@
 {
   "name": "dsh-mading-toolbox",
   "version": "0.3.0",
-  "private": true,
   "description": "码叮工具箱：DeepSeek Harness 的本地截图、二维码、图片压缩与 JSON 工具箱",
   "type": "module",
   "main": "index.js",

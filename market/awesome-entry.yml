@@ -1,0 +1,7 @@
+url: https://github.com/liulxiang/madingbox
+name: liulxiang/madingbox
+category: tools
+description:
+  en: Adds a sidebar toolbox for macOS screenshots, QR code generation and decoding, image compression and JSON formatting, with five agent tools.
+  zh: 在 DSH 侧栏提供 macOS 截图、二维码生成与识别、图片压缩和 JSON 格式化，并暴露五个 Agent 工具。
+icon: https://raw.githubusercontent.com/liulxiang/madingbox/main/assets/icon-512.png

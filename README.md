@@ -69,18 +69,21 @@ SVG：~/Downloads/码叮工具箱/二维码/真机验证.svg
 
 ## 安装
 
-### 通过 DSH 插件管理（推荐）
+### 从 npm 安装（推荐）
 
-1. 克隆或下载本仓库到本地：
+```bash
+dsh plugin --profile web add dsh-mading-toolbox
+```
 
-   ```bash
-   git clone https://github.com/liulxiang/madingbox.git
-   ```
+也可以在 DSH 的「插件 → 发现」里搜索 `dsh-mading-toolbox`（需要先添加包含本包的索引源）。安装后**完全退出并重启 DSH**，Host 与 Web 两端才会加载新插件。
 
-2. 在 DSH 中安装这个本地 bundle：调用 `plugin_manager.install_bundle`，`target` 指向仓库根目录。
-3. **完全退出并重启 DSH**，Host 与 Web 两端才会加载新插件。
+### 从源码安装
 
-本包是本地 bundle，不发布到 npm。
+```bash
+git clone https://github.com/liulxiang/madingbox.git
+```
+
+在 DSH 中调用 `plugin_manager.install_bundle`，`target` 指向仓库根目录。适合改代码调试，不用等 npm 发版。
 
 ### 手工安装（开发调试）
 
