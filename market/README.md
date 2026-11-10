@@ -22,3 +22,7 @@ data/plugins/liulxiang__madingbox.yml
 ```
 
 只改这一个文件，不要手工改仓库生成的 README。收录后，基于该列表的插件市场（如 `realguan/dsh-plugin-market`）会自动同步，不需要单独提 PR。
+
+## 商店截图
+
+`store-listing.md` 里有一份截图清单。真实 UI 截图放到 `assets/screenshots/` 后，在仓库根新增 `screenshots.json`，格式为 1–8 个相对路径的数组。不要用示意图或伪造界面代替。
