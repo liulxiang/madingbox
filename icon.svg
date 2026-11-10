@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="码叮百宝箱">
+  <defs>
+    <linearGradient id="mdx-bg" x1="24" y1="16" x2="232" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6E8BFF"/>
+      <stop offset="0.55" stop-color="#4D6BFE"/>
+      <stop offset="1" stop-color="#2F3FC4"/>
+    </linearGradient>
+    <linearGradient id="mdx-body" x1="48" y1="86" x2="208" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDF2FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#mdx-bg)"/>
+  <circle cx="218" cy="34" r="78" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="28" cy="230" r="62" fill="#0B143F" opacity="0.12"/>
+
+  <path d="M104 92V78a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v14" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+  <rect x="44" y="84" width="168" height="124" rx="24" fill="url(#mdx-body)"/>
+  <path d="M44 118h168" stroke="#D6E0FF" stroke-width="6"/>
+  <rect x="108" y="104" width="40" height="16" rx="6" fill="#FFC857"/>
+
+  <g fill="#3346C9">
+    <rect x="76" y="134" width="26" height="26" rx="6"/>
+    <rect x="132" y="134" width="26" height="26" rx="6"/>
+    <rect x="76" y="172" width="26" height="26" rx="6"/>
+    <rect x="126" y="172" width="9" height="9" rx="2"/>
+    <rect x="143" y="172" width="9" height="9" rx="2"/>
+    <rect x="160" y="172" width="9" height="9" rx="2"/>
+    <rect x="126" y="189" width="9" height="9" rx="2"/>
+    <rect x="160" y="189" width="9" height="9" rx="2"/>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="84" y="142" width="10" height="10" rx="2"/>
+    <rect x="140" y="142" width="10" height="10" rx="2"/>
+    <rect x="84" y="180" width="10" height="10" rx="2"/>
+    <rect x="143" y="189" width="9" height="9" rx="2"/>
+  </g>
+
+  <path d="M208 54l4.6 12.4L225 71l-12.4 4.6L208 88l-4.6-12.4L191 71l12.4-4.6L208 54z" fill="#FFD36E"/>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "name": "@mading/vendor-qrcode",
+  "version": "1.5.4",
+  "private": true,
+  "type": "commonjs",
+  "main": "index.js"
+}

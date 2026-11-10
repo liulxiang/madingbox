@@ -1,0 +1,4 @@
+- insert:
+    - id: mading-toolbox
+      name: dsh-mading-toolbox
+      config: {}
